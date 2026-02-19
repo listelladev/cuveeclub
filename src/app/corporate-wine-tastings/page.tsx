@@ -63,7 +63,7 @@ const WineIcon = () => (
     alt=""
     width={40}
     height={56}
-    className="w-8 h-auto lg:w-10 opacity-90"
+    className="w-16 h-auto lg:w-20 opacity-90"
   />
 );
 

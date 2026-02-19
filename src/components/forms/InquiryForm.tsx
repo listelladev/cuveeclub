@@ -23,11 +23,11 @@ export default function InquiryForm({
 
   return (
     <section
-      className={`${bgClass} py-(--spacing-section) px-6`}
+      className={`${bgClass} py-16 lg:py-20 px-5 lg:px-20`}
       data-header-theme={variant === "dark" ? "dark" : "light"}
     >
-      <div className="max-w-4xl mx-auto">
-        <h2 className="font-[family-name:var(--font-garamond)] text-[clamp(1.5rem,2.5vw,1.8125rem)] mb-12">
+      <div>
+        <h2 className="font-[family-name:var(--font-garamond)] text-[1.8125rem] leading-[44px] mb-12">
           Inquire Now
         </h2>
 

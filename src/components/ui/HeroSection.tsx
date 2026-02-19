@@ -28,7 +28,7 @@ export default function HeroSection({
 }: HeroSectionProps) {
   return (
     <section
-      className="relative h-[60vh] lg:h-[850px] w-full flex items-center justify-center overflow-hidden"
+      className="relative h-[60vh] lg:h-[850px] w-full flex items-center justify-center overflow-hidden bg-[#1a1a1a]"
       data-header-theme="light"
     >
       <Image
@@ -36,8 +36,10 @@ export default function HeroSection({
         alt={imageAlt}
         fill
         priority
+        fetchPriority="high"
         className="object-cover"
         sizes="100vw"
+        quality={85}
       />
       {/* 35% overlay */}
       <div className="absolute inset-0 bg-black/[0.35]" />

@@ -27,7 +27,7 @@ export default function Footer() {
         src="/footer-logo.svg"
         alt=""
         aria-hidden="true"
-        className="absolute top-[41px] left-0 w-full pointer-events-none opacity-[0.12]"
+        className="absolute top-[41px] left-0 w-full pointer-events-none"
       />
 
       {/* Footer links — anchored to bottom */}
