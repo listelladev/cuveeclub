@@ -19,7 +19,7 @@ export default function ContactPage() {
           data-header-theme="light"
         >
           <Image
-            src="/contact-image.png"
+            src="/contact-image.webp"
             alt="Contact Cuvée Club"
             fill
             priority

@@ -11,7 +11,7 @@ interface HomeCardProps {
 
 export default function HomeCard({ title, imageSrc, href }: HomeCardProps) {
   return (
-    <Link href={href} className="relative flex-1 group block overflow-hidden">
+    <Link href={href} className="relative flex-1 h-full group block overflow-hidden">
       {/* Image zooms within the frame on hover */}
       <div className="absolute inset-0 scale-100 group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]">
         <Image

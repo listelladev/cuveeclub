@@ -26,9 +26,9 @@ const WineIcon = () => (
   <Image
     src="/Wine-glass-icon.svg"
     alt=""
-    width={40}
-    height={56}
-    className="w-16 h-auto lg:w-20 opacity-90"
+    width={76}
+    height={144}
+    className="w-10 h-auto lg:w-20 opacity-90"
   />
 );
 
@@ -39,17 +39,22 @@ export default function RestaurantConsultingPage() {
         imageSrc="/restaurant-consulting-hero.png"
         imageAlt="Restaurant consulting"
         title="Restaurant Consulting"
-        subtitle="I create wine lists, train staff, do costing and inventory management. Includes user-friendly manuals for staff, weekly pre-shifts, and monthly seminars."
-        ctaText="[ BOOK HOST ]"
+        subtitle="For restaurants who want to elevate their wine programs, make it an integral part of their profitability and their guest experience."
+        ctaText="[ BOOK ]"
         ctaHref="/booking"
         icon={<WineIcon />}
-        iconPosition="bottom-left"
       />
 
       <ServiceIntro
         heading="Industry Experience"
-        body="I bring 8+ years of experience as a Wine Director and sommelier. I also have over 15 years of experience in the restaurant industry. I have worked with wine lists with over 400 labels to wine lists around 50 labels. From fine-dining restaurants, bars, casual restaurants and wine bars. I have consistently elevated staff's overall wine knowledge by hosting seminars and tastings. I have won prizes for my wine list at the last restaurant I was the Wine Director at. If you are looking to elevate your wine program, build wine education for your staff, or shorten your wine inventory, get in contact with me."
-        ctaText="[ BOOK HOST ]"
+        body={
+          <>
+            <p>With eight years of experience as a Wine Director and sommelier, and over seventeen years in the restaurant industry, I bring operational expertise and understand the challenges restaurants face. I have managed wine lists ranging from 50 to over 500 labels across fine-dining restaurants, hotels, casual establishments, and wine bars.</p>
+            <p>My approach is both creative and results-driven. I consistently increase wine sales, deliver precise inventory management, and strengthen overall program performance. Through guided tastings and staff seminars, I elevate team confidence and wine literacy, translating directly to improved guest engagement and higher check averages.</p>
+            <p>If you are looking to refine your wine program, develop staff education, optimize or restructure your inventory, or reposition your list with intention, I would be pleased to connect.</p>
+          </>
+        }
+        ctaText="[ BOOK ]"
         ctaHref="/booking"
         variant="light"
       />

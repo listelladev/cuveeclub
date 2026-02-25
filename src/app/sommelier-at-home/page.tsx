@@ -14,39 +14,34 @@ export const metadata: Metadata = {
 
 const packages = [
   {
-    name: "Village Package",
+    name: "'Village' Package",
     duration: "90 min",
     description: [
-      "4 wines: 2 whites, 2 reds.",
+      "4 wines; 2 whites & 2 reds",
       "",
-      "The How's? Wine 101. Light versus full-bodied.",
-      "How to taste. How to drink, how to open a bottle, how to hold a glass. How to swirl. How to smell, how to taste.",
+      "Wine 101. An introduction to wine etiquette & what to look for when tasting wine?",
+      "Light bodied versus full",
     ],
   },
   {
-    name: "Premier Cru",
+    name: "'Premier Cru' Package",
     duration: "90 min",
     description: [
-      "5 wines. 1 Sparkling wine, 2 whites 2 reds.",
+      "5 wines; 1 sparkling, 2 whites & 2 reds",
       "",
-      "Discover your tastes. A more in depth tasting designed for you to understand your palate better.",
+      "A more in depth tasting designed for you to understand your palate better.",
       "",
-      "Know about the classic grape varieties. Understand comparative tastings. Structure of a wine. What to ask at the restaurant/liquor store. Verbiage.",
+      "Understanding of comparative tasting. Overview on the classic grape varieties. Reading labels and knowing how to choose a bottle.",
     ],
   },
   {
-    name: "Grand Cru Package",
+    name: "'Grand Cru' Package",
     duration: "90 min",
     description: [
-      "4 red wines",
+      "4 wines, red",
       "",
-      "Deep-dive into the classics. Those wines you need to know about. Think Burgundy, Bordeaux, Barolo, Brunello.",
-      "",
-      "Optional custom package designed specifically for your group depending on your preferences.",
-      "",
-      "Option of adding food pairings. Whether you're looking for a quick lunch option, canapés, or dinner. I can contact local chef options for your group.",
-      "",
-      "Want a tasting focused solely on Italy, or curious about Champagne, French wines, or BC vintages? Interested in blind tastings or a longer, 2-hour experience? Reach out to me directly to customize your tasting.",
+      "A deep-dive into the classics. Splurge into premium wine regions.",
+      "Think Bordeaux, Burgundy, Brunello, Barolo.",
     ],
   },
 ];
@@ -61,9 +56,9 @@ const WineIcon = () => (
   <Image
     src="/Wine-glass-icon.svg"
     alt=""
-    width={40}
-    height={56}
-    className="w-16 h-auto lg:w-20 opacity-90"
+    width={76}
+    height={144}
+    className="w-10 h-auto lg:w-20 opacity-90"
   />
 );
 
@@ -74,17 +69,23 @@ export default function SommelierAtHomePage() {
         imageSrc="/sommelier-page-hero.png"
         imageAlt="Sommelier at home"
         title="Sommelier / Maitre d'Hotel At Home"
-        subtitle="Serving for private dinners in the comfort of your home."
-        ctaText="[ BOOK HOST ]"
+        subtitle="For hosts who wish to fully enjoy their evening without managing the details."
+        ctaText="[ BOOK ]"
         ctaHref="/booking"
         icon={<WineIcon />}
-        iconPosition="bottom-right"
       />
 
       <ServiceIntro
         heading="Private tasting experiences"
-        body="I come to my clients. They don't have to drive anywhere and pay mark-ups. I am an independent business owner, meaning I won't be biased by brands or sales goals. You can stay in the comfort of your home or offices and have me come to you. Wines, glassware, water bottles and note pads are included. I bring 8+ years of experience as a professional sommelier. I deliver customized experiences that are elevated yet approachable."
-        ctaText="[ BOOK HOST ]"
+        body={
+          <>
+            <p>Cuvée Club offers professional, discreet hospitality service in the comfort of your home. Acting as your sommelier and maître d&apos;hôtel, I oversee the flow of the evening; pouring wines, serving each course with precision, clearing seamlessly, and ensuring every guest feels attended to.</p>
+            <p>With over seventeen years in hospitality, including fine dining and luxury establishments, I bring warmth and attention to detail to your table. My presence allows you to remain a guest in your own home, confident that service and atmosphere are handled with care.</p>
+            <p>This service is ideal for private dinners, celebrations, and intimate gatherings where elevated service makes all the difference.</p>
+            <p>Please inquire for availability.</p>
+          </>
+        }
+        ctaText="[ BOOK ]"
         ctaHref="/booking"
         variant="light"
       />

@@ -8,12 +8,11 @@ import { fadeUp } from "@/lib/animations";
 interface HeroSectionProps {
   imageSrc: string;
   imageAlt: string;
-  title: string;
+  title: React.ReactNode;
   subtitle?: string;
   ctaText?: string;
   ctaHref?: string;
   icon?: React.ReactNode;
-  iconPosition?: "bottom-left" | "bottom-right";
 }
 
 export default function HeroSection({
@@ -24,11 +23,10 @@ export default function HeroSection({
   ctaText,
   ctaHref,
   icon,
-  iconPosition,
 }: HeroSectionProps) {
   return (
     <section
-      className="relative h-[60vh] lg:h-[850px] w-full flex items-center justify-center overflow-hidden bg-[#1a1a1a]"
+      className={`relative w-full flex items-center justify-center overflow-hidden bg-[#1a1a1a] ${icon ? "h-[85vh] lg:h-[850px]" : "h-[60vh] lg:h-[850px]"}`}
       data-header-theme="light"
     >
       <Image
@@ -44,15 +42,9 @@ export default function HeroSection({
       {/* 35% overlay */}
       <div className="absolute inset-0 bg-black/[0.35]" />
 
-      {/* Icon — absolute bottom-left or bottom-right */}
-      {icon && iconPosition && (
-        <div
-          className={`absolute z-10 bottom-8 lg:bottom-12 ${
-            iconPosition === "bottom-left"
-              ? "left-8 lg:left-12"
-              : "right-8 lg:right-12"
-          }`}
-        >
+      {/* Icon — absolutely positioned, centered horizontally, near bottom */}
+      {icon && (
+        <div className="absolute z-10 bottom-6 lg:bottom-12 left-1/2 -translate-x-1/2">
           {icon}
         </div>
       )}

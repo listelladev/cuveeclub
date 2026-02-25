@@ -26,7 +26,7 @@ export default function PackagesSection({
   return (
     <section className="bg-white text-charcoal" data-header-theme="dark">
       {/* Section header: "Packages" heading left, illustration top-right */}
-      <div className="flex items-start justify-between px-5 lg:px-20 pt-16 lg:pt-[100px] pb-0">
+      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between px-5 lg:px-20 pt-16 lg:pt-[100px] pb-0 gap-8 lg:gap-0">
         <motion.h2
           className="font-[family-name:var(--font-garamond)] text-[1.8125rem] leading-[44px] text-charcoal"
           variants={fadeUp}
@@ -39,7 +39,7 @@ export default function PackagesSection({
 
         {illustrationSrc && (
           <motion.div
-            className="hidden lg:block flex-shrink-0 w-[450px]"
+            className="flex-shrink-0 w-[280px] lg:w-[450px] self-center lg:self-auto"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"

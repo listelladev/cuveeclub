@@ -93,7 +93,7 @@ export default function Navigation({ isOpen, onClose }: NavigationProps) {
 
             <div className="hidden lg:block">
               <BracketButton href="/booking" variant="dark" onClick={onClose}>
-                [ BOOK HOST ]
+                [ BOOK ]
               </BracketButton>
             </div>
           </div>

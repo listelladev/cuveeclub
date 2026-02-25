@@ -6,7 +6,7 @@ import { fadeUp } from "@/lib/animations";
 
 interface ServiceIntroProps {
   heading: string;
-  body: string;
+  body: string | React.ReactNode;
   ctaText?: string;
   ctaHref?: string;
   variant?: "light" | "dark";
@@ -45,9 +45,9 @@ export default function ServiceIntro({
           <h2 className="font-[family-name:var(--font-garamond)] text-[1.8125rem] leading-[44px]">
             {heading}
           </h2>
-          <p className="font-[family-name:var(--font-roboto-mono)] text-[0.875rem] leading-[20px] tracking-wide">
-            {body}
-          </p>
+          <div className="font-[family-name:var(--font-roboto-mono)] text-[0.875rem] leading-[20px] tracking-wide space-y-5">
+            {typeof body === "string" ? <p>{body}</p> : body}
+          </div>
         </div>
 
         {/* Center: vertical divider — desktop only */}

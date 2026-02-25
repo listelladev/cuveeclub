@@ -70,7 +70,7 @@ export default function Header() {
 
           <div className="hidden lg:block">
             <BracketButton href="/booking" variant={theme === "light" ? "light" : "dark"}>
-              [ BOOK HOST ]
+              [ BOOK ]
             </BracketButton>
           </div>
         </div>
