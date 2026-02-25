@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { blurPlaceholders } from "@/lib/blur-placeholders";
 import Footer from "@/components/layout/Footer";
 import { fadeUp } from "@/lib/animations";
 
@@ -33,6 +34,8 @@ export default function BookingPage() {
           priority
           className="object-cover object-center"
           sizes="100vw"
+          placeholder="blur"
+          blurDataURL={blurPlaceholders["/booking-hero.png"]}
         />
         <div className="absolute inset-0 bg-black/[0.35]" />
         <motion.div
@@ -42,7 +45,7 @@ export default function BookingPage() {
           variants={fadeUp}
         >
           <h1 className="font-[family-name:var(--font-garamond)] text-[clamp(1.6rem,3vw,1.8125rem)] leading-snug">
-            Book Host
+            Book
           </h1>
         </motion.div>
       </section>

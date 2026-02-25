@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { blurPlaceholders } from "@/lib/blur-placeholders";
 
 interface HomeCardProps {
   title: string;
@@ -21,6 +22,8 @@ export default function HomeCard({ title, imageSrc, href }: HomeCardProps) {
           priority
           className="object-cover"
           sizes="(max-width: 1024px) 100vw, 33vw"
+          placeholder="blur"
+          blurDataURL={blurPlaceholders[imageSrc]}
         />
       </div>
 

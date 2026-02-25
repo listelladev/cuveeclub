@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import BracketButton from "@/components/ui/BracketButton";
+import { blurPlaceholders } from "@/lib/blur-placeholders";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
@@ -25,6 +26,8 @@ export default function AboutPage() {
             priority
             className="object-cover object-top"
             sizes="(max-width: 1024px) 100vw, 50vw"
+            placeholder="blur"
+            blurDataURL={blurPlaceholders["/about-image.webp"]}
           />
         </div>
 

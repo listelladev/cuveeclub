@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import BracketButton from "./BracketButton";
 import { fadeUp } from "@/lib/animations";
+import { blurPlaceholders } from "@/lib/blur-placeholders";
 
 interface HeroSectionProps {
   imageSrc: string;
@@ -38,6 +39,8 @@ export default function HeroSection({
         className="object-cover"
         sizes="100vw"
         quality={85}
+        placeholder="blur"
+        blurDataURL={blurPlaceholders[imageSrc]}
       />
       {/* 35% overlay */}
       <div className="absolute inset-0 bg-black/[0.35]" />
