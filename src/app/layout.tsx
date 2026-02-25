@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   },
   description:
     "Premium wine tasting experiences, restaurant consulting, and sommelier services in Vancouver.",
+  icons: {
+    icon: "/favicon.png",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
