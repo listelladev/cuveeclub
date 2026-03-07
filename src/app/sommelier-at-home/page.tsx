@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import HeroSection from "@/components/ui/HeroSection";
 import ServiceIntro from "@/components/sections/ServiceIntro";
-import PackagesSection from "@/components/sections/PackagesSection";
-import InquiryForm from "@/components/forms/InquiryForm";
+import BracketButton from "@/components/ui/BracketButton";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
@@ -11,40 +10,6 @@ export const metadata: Metadata = {
   description:
     "Bring a professional sommelier experience to your home. Intimate wine tastings and dinner pairings in your own space.",
 };
-
-const packages = [
-  {
-    name: "'Village' Package",
-    duration: "90 min",
-    description: [
-      "4 wines; 2 whites & 2 reds",
-      "",
-      "Wine 101. An introduction to wine etiquette & what to look for when tasting wine?",
-      "Light bodied versus full",
-    ],
-  },
-  {
-    name: "'Premier Cru' Package",
-    duration: "90 min",
-    description: [
-      "5 wines; 1 sparkling, 2 whites & 2 reds",
-      "",
-      "A more in depth tasting designed for you to understand your palate better.",
-      "",
-      "Understanding of comparative tasting. Overview on the classic grape varieties. Reading labels and knowing how to choose a bottle.",
-    ],
-  },
-  {
-    name: "'Grand Cru' Package",
-    duration: "90 min",
-    description: [
-      "4 wines, red",
-      "",
-      "A deep-dive into the classics. Splurge into premium wine regions.",
-      "Think Bordeaux, Burgundy, Brunello, Barolo.",
-    ],
-  },
-];
 
 const galleryImages = [
   { src: "/sommelier-1of3.png", alt: "Sommelier at home experience" },
@@ -109,13 +74,14 @@ export default function SommelierAtHomePage() {
         </div>
       </section>
 
-      <PackagesSection
-        packages={packages}
-        illustrationSrc="/sommelier-package-icon.svg"
-        illustrationAlt="Sommelier illustration"
-      />
-
-      <InquiryForm source="Sommelier / Maître d'Hôtel at Home" variant="dark" />
+      <section className="bg-white text-charcoal py-16 lg:py-20 px-5 lg:px-20 text-center" data-header-theme="dark">
+        <h2 className="font-[family-name:var(--font-garamond)] text-[1.8125rem] leading-[44px] mb-12">
+          Inquire Now
+        </h2>
+        <BracketButton href="mailto:host@cuveeclub.com" variant="dark">
+          [ EMAIL US ]
+        </BracketButton>
+      </section>
 
       <Footer />
     </main>

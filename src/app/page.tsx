@@ -6,7 +6,7 @@ import HomeCard from "@/components/sections/HomeCard";
 const services = [
   {
     title: "Corporate and Personal\nWine Tasting Events",
-    imageSrc: "/corporate-personal-home.webp",
+    imageSrc: "/corporate-personal-home-new.webp",
     href: "/corporate-wine-tastings",
   },
   {

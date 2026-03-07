@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import HeroSection from "@/components/ui/HeroSection";
 import ServiceIntro from "@/components/sections/ServiceIntro";
-import InquiryForm from "@/components/forms/InquiryForm";
+import BracketButton from "@/components/ui/BracketButton";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
@@ -97,7 +97,14 @@ export default function RestaurantConsultingPage() {
         </div>
       </section>
 
-      <InquiryForm source="Restaurant Consulting" variant="dark" />
+      <section className="bg-white text-charcoal py-16 lg:py-20 px-5 lg:px-20 text-center" data-header-theme="dark">
+        <h2 className="font-[family-name:var(--font-garamond)] text-[1.8125rem] leading-[44px] mb-12">
+          Inquire Now
+        </h2>
+        <BracketButton href="mailto:host@cuveeclub.com" variant="dark">
+          [ EMAIL US ]
+        </BracketButton>
+      </section>
 
       <Footer />
     </main>
