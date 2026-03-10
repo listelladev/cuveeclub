@@ -8,8 +8,6 @@ import Footer from "@/components/layout/Footer";
 import { fadeUp } from "@/lib/animations";
 
 export default function BookingPage() {
-  const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL;
-
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://assets.calendly.com/assets/external/widget.js";
@@ -52,26 +50,15 @@ export default function BookingPage() {
 
       <section
         id="calendly"
-        className="bg-[#f3f1e8] py-(--spacing-section) px-6"
+        className="bg-white py-(--spacing-section) px-6"
         data-header-theme="dark"
       >
-        <div className="max-w-4xl mx-auto">
-          {calendlyUrl ? (
-            <div
-              className="calendly-inline-widget"
-              data-url={calendlyUrl}
-              style={{ minWidth: "320px", height: "700px" }}
-            />
-          ) : (
-            <div className="text-center py-20">
-              <p className="font-[family-name:var(--font-garamond)] text-[clamp(1.5rem,3vw,1.8125rem)] text-charcoal mb-4">
-                This is where the booking form will go
-              </p>
-              <p className="font-[family-name:var(--font-roboto-mono)] text-[0.8125rem] text-charcoal/60 tracking-wide">
-                Our online booking system is being set up. In the meantime, please reach out via our contact page.
-              </p>
-            </div>
-          )}
+        <div className="w-full">
+          <div
+            className="calendly-inline-widget h-[750px] lg:h-[1000px]"
+            data-url="https://calendly.com/host-cuveeclub?text_color=000000&primary_color=66242e"
+            style={{ minWidth: "320px" }}
+          />
         </div>
       </section>
 
