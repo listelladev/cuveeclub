@@ -53,7 +53,7 @@ export async function submitInquiry(
     const resend = new Resend(apiKey);
 
     await resend.emails.send({
-      from: "Cuvée Club <hello@cuveeclub.com>",
+      from: "Cuvée Club <host@cuveeclub.com>",
       to: contactEmail.split(",").map((e) => e.trim()),
       replyTo: email,
       subject: `New Inquiry from ${firstName} ${lastName} — ${source}`,
